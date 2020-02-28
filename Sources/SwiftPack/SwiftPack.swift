@@ -21,7 +21,9 @@ extension Bool: Packable {
 
 extension Int: Packable {
     public func pack() -> [UInt8] {
-        if self >= 0 && self <= UInt8.max {
+        if self >= -32 && self < 0 {
+            return []
+        } else if self >= 0 && self <= UInt8.max {
             return UInt8(self).pack()
         }
         
@@ -31,7 +33,9 @@ extension Int: Packable {
 
 extension Int8: Packable {
     public func pack() -> [UInt8] {
-        if self >= 0 && self <= UInt8.max {
+        if self >= -32 && self < 0 {
+            
+        } else if self >= 0 && self <= UInt8.max {
             return UInt8(self).pack()
         }
         
