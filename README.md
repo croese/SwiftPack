@@ -1,3 +1,3 @@
 # SwiftPack
 
-A description of this package.
+Spec: https://github.com/msgpack/msgpack/blob/master/spec.md
